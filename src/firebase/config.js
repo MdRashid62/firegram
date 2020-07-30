@@ -1,3 +1,7 @@
+import * as firebase from 'firebase/app';
+import 'firebase/storage'; //to store ouur images
+import 'firebase/firestore'; //our database
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAOrTl-RmroiwmQcEMSK_2wLCM-V58M5aI",
@@ -10,3 +14,8 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  const projectStorage = firebase.storage();
+  const projectFirestore = firebase.firestore();
+
+  export { projectStorage, projectFirestore };
